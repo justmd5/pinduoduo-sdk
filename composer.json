@@ -1,0 +1,21 @@
+{
+    "name": "justmd5/pinduoduo-sdk",
+    "description": "拼多多API SDK【拼多多开放平台】.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "丁海军",
+            "email": "heyjun2012@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Justmd5\\PinDuoDuo\\": "src/"
+        }
+    },
+    "require": {
+        "hanson/foundation-sdk": "^2.0",
+        "ext-json": "*"
+    }
+}
