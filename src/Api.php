@@ -3,9 +3,8 @@
  * Created for pinduoduo-sdk.
  * User: 丁海军
  * Date: 2018/10/13
- * Time: 15:05
+ * Time: 15:05.
  */
-
 
 namespace Justmd5\PinDuoDuo;
 
@@ -54,19 +53,19 @@ class Api extends AbstractAPI
      */
     public function request($method, $params, $data_type = 'JSON')
     {
-        $http   = $this->getHttp();
+        $http = $this->getHttp();
         $params = $this->paramsHandle($params);
         if ($this->needToken) {
             $params['access_token'] = $this->pinduoduo['oauth.access_token']->getToken();
         }
-        $params['client_id']   = $this->pinduoduo['oauth.access_token']->getClientId();
+        $params['client_id'] = $this->pinduoduo['oauth.access_token']->getClientId();
         $params['sign_method'] = 'md5';
-        $params['type']        = $method;
-        $params['data_type']   = $data_type;
-        $params['timestamp']   = strval(time());
-        $params['sign']        = $this->signature($params);
-        $response              = call_user_func_array([$http, 'post'], [self::URL, $params]);
-        $responseBody          = strval($response->getBody());
+        $params['type'] = $method;
+        $params['data_type'] = $data_type;
+        $params['timestamp'] = strval(time());
+        $params['sign'] = $this->signature($params);
+        $response = call_user_func_array([$http, 'post'], [self::URL, $params]);
+        $responseBody = strval($response->getBody());
 
         return strtolower($data_type) == 'json' ? json_decode($responseBody, true) : $responseBody;
     }

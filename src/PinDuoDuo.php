@@ -3,18 +3,16 @@
  * Created for pinduoduo-sdk.
  * User: 丁海军
  * Date: 2018/10/13
- * Time: 15:05
+ * Time: 15:05.
  */
 
 namespace Justmd5\PinDuoDuo;
 
-
 use Hanson\Foundation\Foundation;
 
 /**
- * Class PinDuoDuo
+ * Class PinDuoDuo.
  *
- * @package Justmd5\PinDuoDuo
  * @property \Justmd5\PinDuoDuo\Api           $api
  * @property \Justmd5\PinDuoDuo\Api           $auth_api
  * @property \Justmd5\PinDuoDuo\AccessToken   $access_token

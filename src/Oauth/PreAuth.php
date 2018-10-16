@@ -3,7 +3,7 @@
  * Created for pinduoduo-sdk.
  * User: 丁海军
  * Date: 2018/10/13
- * Time: 15:05
+ * Time: 15:05.
  */
 
 namespace Justmd5\PinDuoDuo\Oauth;
@@ -12,7 +12,6 @@ use Justmd5\PinDuoDuo\PinDuoDuo;
 
 class PreAuth
 {
-
     const AUTHORIZE_API_ARR = [
         'MERCHANT' => 'https://mms.pinduoduo.com/open.html?',
         'H5'       => 'https://mai.pinduoduo.com/h5-login.html?',
@@ -38,7 +37,7 @@ class PreAuth
     {
         $url = $this->authorizationUrl($state, $view);
 
-        header('Location:' . $url);
+        header('Location:'.$url);
     }
 
     private function accessToken()
@@ -56,7 +55,7 @@ class PreAuth
      */
     public function authorizationUrl($state = null, $view = null)
     {
-        return self::AUTHORIZE_API_ARR[strtoupper($this->app['config']->get('member_type'))] . http_build_query([
+        return self::AUTHORIZE_API_ARR[strtoupper($this->app['config']->get('member_type'))].http_build_query([
                 'client_id'     => $this->accessToken()->getClientId(),
                 'response_type' => 'code',
                 'state'         => $state,
@@ -66,14 +65,14 @@ class PreAuth
     }
 
     /**
-     * 获取 access token
+     * 获取 access token.
      *
      * @param      $code
      * @param null $state
      *
      * @return mixed
      */
-    public function getAccessToken($code=null, $state = null)
+    public function getAccessToken($code = null, $state = null)
     {
         return $this->accessToken()->token([
             'client_id'     => $this->accessToken()->getClientId(),
@@ -86,7 +85,7 @@ class PreAuth
     }
 
     /**
-     * 刷新令牌
+     * 刷新令牌.
      *
      * @param      $refreshToken
      * @param null $state
@@ -103,5 +102,4 @@ class PreAuth
             'state'         => $state,
         ]);
     }
-
 }

@@ -3,11 +3,10 @@
  * Created for pinduoduo-sdk
  * User: 丁海军
  * Date: 2018/6/30
- * Time: 下午1:40
+ * Time: 下午1:40.
  */
 
 namespace Justmd5\PinDuoDuo;
-
 
 use Hanson\Foundation\AbstractAccessToken;
 
@@ -32,9 +31,8 @@ class AccessToken extends AbstractAccessToken
 
     public function __construct($clientId, $secret)
     {
-        $this->appId  = $clientId;
+        $this->appId = $clientId;
         $this->secret = $secret;
-
     }
 
     /**
@@ -64,8 +62,9 @@ class AccessToken extends AbstractAccessToken
      *
      * @param $result
      *
-     * @return mixed
      * @throws \Exception
+     *
+     * @return mixed
      */
     public function checkTokenResponse($result)
     {
