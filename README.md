@@ -42,14 +42,16 @@ $config = [
 $pinduoduo = new PinDuoDuo($config);
 
 ```
+### 调用示例
+
 >因目前我只有多多客角色账号，所以示例以多多客接口为例，他两种角色理论相同，请自行尝试
-### 调用无需授权接口示例
+#### 调用无需授权接口示例
 > 多多进宝商品详情查询 pdd.ddk.goods.detail
 ```php
 $result   = $pinduoduo->api->request('pdd.ddk.goods.detail', ['goods_id_list' => ['395581006']]);
 
 ```
-### 调用需授权接口示例
+#### 调用需授权接口示例
 
 * 获取授权 URL
 ```php
