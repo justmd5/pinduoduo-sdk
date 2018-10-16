@@ -3,6 +3,14 @@
     "description": "拼多多API SDK【拼多多开放平台】.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "pinduoduo",
+        "duoduoke",
+        "拼多多",
+        "拼多多SDK",
+        "多多客",
+        "sdk"
+    ],
     "authors": [
         {
             "name": "丁海军",
@@ -15,6 +23,7 @@
         }
     },
     "require": {
+        "php": ">=7.0",
         "hanson/foundation-sdk": "^2.0",
         "ext-json": "*"
     }
