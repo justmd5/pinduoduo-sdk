@@ -3,7 +3,7 @@
  * Created for pinduoduo-sdk.
  * User: 丁海军
  * Date: 2018/10/13
- * Time: 15:05
+ * Time: 15:05.
  */
 
 namespace Justmd5\PinDuoDuo;
@@ -13,7 +13,6 @@ use Pimple\ServiceProviderInterface;
 
 class ServiceProvider implements ServiceProviderInterface
 {
-
     /**
      * Registers services on the given container.
      * This method should only be used to configure services and parameters.
@@ -30,12 +29,11 @@ class ServiceProvider implements ServiceProviderInterface
             );
         };
 
-        $pimple['api']      = function ($pimple) {
+        $pimple['api'] = function ($pimple) {
             return new Api($pimple);
         };
         $pimple['auth_api'] = function ($pimple) {
             return new Api($pimple, true);
         };
-
     }
 }

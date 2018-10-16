@@ -3,18 +3,16 @@
  * Created for pinduoduo-sdk.
  * User: 丁海军
  * Date: 2018/10/13
- * Time: 15:05
+ * Time: 15:05.
  */
 
 namespace Justmd5\PinDuoDuo\Oauth;
-
 
 use Justmd5\PinDuoDuo\AccessToken as BaseAccessToken;
 use Symfony\Component\HttpFoundation\Request;
 
 class AccessToken extends BaseAccessToken
 {
-
     /**
      * @var Request
      */
@@ -61,5 +59,4 @@ class AccessToken extends BaseAccessToken
     {
         return $this->request;
     }
-
 }
