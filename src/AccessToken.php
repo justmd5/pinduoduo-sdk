@@ -38,17 +38,18 @@ class AccessToken extends AbstractAccessToken
     /**
      * Get token from remote server.
      *
-     * @return mixed
      * @throws \Exception
+     *
+     * @return mixed
      */
     public function getTokenFromServer()
     {
-       if(!empty($_GET['code'])){
-           $this->setCode(trim($_GET['code']));
-       }
-       if(empty($this->code)){
-           throw new \Exception('code不能为空');
-       }
+        if (!empty($_GET['code'])) {
+            $this->setCode(trim($_GET['code']));
+        }
+        if (empty($this->code)) {
+            throw new \Exception('code不能为空');
+        }
         $response = $this->getHttp()->json(self::TOKEN_API, [
             'client_id'     => $this->appId,
             'client_secret' => $this->secret,
