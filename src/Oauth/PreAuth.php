@@ -55,7 +55,7 @@ class PreAuth
      */
     public function authorizationUrl($state = null, $view = null)
     {
-        return self::AUTHORIZE_API_ARR[strtoupper($this->app['config']->get('member_type'))].http_build_query([
+        return self::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))].http_build_query([
                 'client_id'     => $this->accessToken()->getClientId(),
                 'response_type' => 'code',
                 'state'         => $state,
