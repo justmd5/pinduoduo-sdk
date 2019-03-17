@@ -8,6 +8,7 @@
 
 namespace Justmd5\PinDuoDuo;
 
+use Hanson\Foundation\Foundation;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
@@ -22,10 +23,10 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $pimple)
     {
-        $pimple['access_token'] = function ($pimple) {
+        $pimple['access_token'] = function (Foundation $pimple) {
             return new AccessToken(
-                $pimple['config']['client_id'],
-                $pimple['config']['client_secret']
+                $pimple->getConfig('client_id'),
+                $pimple->getConfig('client_secret')
             );
         };
 

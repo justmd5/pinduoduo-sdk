@@ -31,8 +31,8 @@ class Oauth
     public function createAuthorization($token, $expires = 86399)
     {
         $accessToken = new AccessToken(
-            $this->app['config']['client_id'],
-            $this->app['config']['client_secret']
+            $this->app->getConfig('client_id'),
+            $this->app->getConfig('client_secret')
         );
 
         $accessToken->setToken($token, $expires);
