@@ -17,7 +17,7 @@
 
 ### 安装
 
-`composer require justmd5/pinduoduo-sdk:dev-master`
+`composer require justmd5/pinduoduo-sdk`
 
 ### 使用
 
