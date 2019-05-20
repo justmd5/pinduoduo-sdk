@@ -7,6 +7,7 @@
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/github/stars/justmd5/pinduoduo-sdk.svg?style=social&label=Stars" alt="GitHub stars"></a>
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://poser.pugx.org/justmd5/pinduoduo-sdk/v/unstable.svg" alt="Latest Unstable Version"></a>
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/github/license/justmd5/pinduoduo-sdk.svg" alt="License"></a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk.svg?type=shield"/></a>
 </p>
 
 ### 要求
@@ -82,3 +83,6 @@ $result   = $pinduoduo->auth_api->request('pdd.ddk.oauth.goods.pid.query');
 ## License
 
 MIT
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk?ref=badge_large)
