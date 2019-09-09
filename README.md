@@ -3,11 +3,12 @@
 <p align="center">
 <a href="https://styleci.io/repos/153218715"><img src="https://styleci.io/repos/153218715/shield?branch=master" alt="styleci"></a>
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/packagist/php-v/justmd5/pinduoduo-sdk.svg" alt="PHP from Packagist"></a>
+<a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://poser.pugx.org/justmd5/pinduoduo-sdk/downloads.svg" alt="Total Downloadsn"></a>
+    <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/github/stars/justmd5/pinduoduo-sdk.svg?style=social&label=Stars" alt="GitHub stars"></a>
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://poser.pugx.org/justmd5/pinduoduo-sdk/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/github/stars/justmd5/pinduoduo-sdk.svg?style=social&label=Stars" alt="GitHub stars"></a>
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://poser.pugx.org/justmd5/pinduoduo-sdk/v/unstable.svg" alt="Latest Unstable Version"></a>
-<a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/github/license/justmd5/pinduoduo-sdk.svg" alt="License"></a>
 <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk.svg?type=shield"/></a>
+    <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/github/license/justmd5/pinduoduo-sdk.svg" alt="License"></a>
 </p>
 
 ### 要求
