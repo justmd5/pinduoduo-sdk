@@ -64,11 +64,15 @@ $url = $pinduoduo->pre_auth->authorizationUrl();
     $pinduoduo->pre_auth->authorizationRedirect();
 ```
 * 在重定向页面，你可以获取此次授权账号的 token
-```php
-$token = $pinduoduo->pre_auth->getAccessToken();
-//也可以通过上面得到的 refresh_token 去刷新令牌
-//$token = $pinduoduo->pre_auth->refreshToken($token['refresh_token']);
-```
+   ```php
+   $token = $pinduoduo->pre_auth->getAccessToken();
+   //也可以通过上面得到的 refresh_token 去刷新令牌
+   //$token = $pinduoduo->pre_auth->refreshToken($token['refresh_token']);
+   ```
+* 创建授权应用
+  ```php
+  $pinduoduo = $pinduoduo->oauth->createAuthorization($token['token']);
+  ```
 > 获取当前账号下有多少推广位 pdd.ddk.oauth.goods.pid.query
 ```php
 $result   = $pinduoduo->auth_api->request('pdd.ddk.oauth.goods.pid.query');
