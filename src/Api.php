@@ -51,7 +51,7 @@ class Api extends AbstractAPI
      *
      * @return mixed
      */
-    public function request($method, $params, $data_type = 'JSON')
+    public function request($method, $params=[], $data_type = 'JSON')
     {
         $http = $this->getHttp();
         $params = $this->paramsHandle($params);
