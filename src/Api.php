@@ -22,6 +22,7 @@ class Api extends AbstractAPI
 
     public function __construct(PinDuoDuo $pinduoduo, $needToken = false)
     {
+        parent::__construct($pinduoduo);
         $this->pinduoduo = $pinduoduo;
         $this->needToken = $needToken;
     }
