@@ -13,7 +13,7 @@ use Justmd5\PinDuoDuo\PinDuoDuo;
 class PreAuth
 {
     const AUTHORIZE_API_ARR = [
-        'MERCHANT' => 'https://mms.pinduoduo.com/open.html?',
+        'MERCHANT' => 'https://fuwu.pinduoduo.com/service-market/auth?',
         'H5'       => 'https://mai.pinduoduo.com/h5-login.html?',
         'JINBAO'   => 'https://jinbao.pinduoduo.com/open.html?',
     ];
