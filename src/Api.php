@@ -12,7 +12,7 @@ use Hanson\Foundation\AbstractAPI;
 
 class Api extends AbstractAPI
 {
-    const URL = 'http://gw-api.pinduoduo.com/api/router';
+    const URL = 'https://gw-api.pinduoduo.com/api/router';
 
     /**
      * @var pinduoduo
