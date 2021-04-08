@@ -12,7 +12,7 @@ use Hanson\Foundation\AbstractAccessToken;
 
 class AccessToken extends AbstractAccessToken
 {
-    const TOKEN_API = 'http://open-api.pinduoduo.com/oauth/token';
+    const TOKEN_API = 'https://open-api.pinduoduo.com/oauth/token';
     protected $code;
 
     /**
