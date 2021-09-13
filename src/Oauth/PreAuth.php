@@ -32,10 +32,10 @@ class PreAuth
     /**
      * 重定向至授权 URL.
      *
-     * @param      $state
-     * @param null $view
+     * @param  string  $state
+     * @param  string|null  $view
      */
-    public function authorizationRedirect($state = 'state', $view = null)
+    public function authorizationRedirect(string $state = 'state', string $view = null)
     {
         $url = $this->authorizationUrl($state, $view);
 
@@ -50,12 +50,12 @@ class PreAuth
     /**
      * 获取授权URL.
      *
-     * @param string $state
-     * @param string $view
+     * @param  string|null  $state
+     * @param  string|null  $view
      *
      * @return string
      */
-    public function authorizationUrl($state = null, $view = null)
+    public function authorizationUrl(string $state = null, string $view = null): string
     {
         return self::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))].http_build_query([
             'client_id'     => $this->accessToken()->getClientId(),
@@ -69,12 +69,12 @@ class PreAuth
     /**
      * 获取 access token.
      *
-     * @param      $code
+     * @param  string|null  $code
      * @param null $state
      *
      * @return mixed
      */
-    public function getAccessToken($code = null, $state = null)
+    public function getAccessToken(string $code = null, $state = null)
     {
         return $this->accessToken()->token([
             'client_id'     => $this->accessToken()->getClientId(),
@@ -89,12 +89,12 @@ class PreAuth
     /**
      * 刷新令牌.
      *
-     * @param      $refreshToken
-     * @param null $state
+     * @param  string  $refreshToken
+     * @param  string|null  $state
      *
      * @return mixed
      */
-    public function refreshToken($refreshToken, $state = null)
+    public function refreshToken(string $refreshToken, string $state = null)
     {
         return $this->accessToken()->token([
             'client_id'     => $this->accessToken()->getClientId(),

@@ -28,9 +28,8 @@ class ServiceProvider implements ServiceProviderInterface
                 $pimple->getConfig('client_id'),
                 $pimple->getConfig('client_secret')
             );
-
+            $accessToken->setHttp($pimple->http);
             $accessToken->setRequest($pimple['request']);
-
             $accessToken->setRedirectUri($pimple->getConfig('redirect_uri'));
 
             return $accessToken;

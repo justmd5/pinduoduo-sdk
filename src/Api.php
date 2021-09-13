@@ -46,13 +46,25 @@ class Api extends AbstractAPI
     }
 
     /**
-     * @param string $method
-     * @param array  $params
-     * @param string $data_type
+     * @param  bool  $auth
+     *
+     * @return $this
+     */
+    public function auth(bool $auth = true): Api
+    {
+        $this->needToken = $auth;
+
+        return $this;
+    }
+
+    /**
+     * @param  string  $method
+     * @param  array  $params
+     * @param  string  $data_type
      *
      * @return mixed
      */
-    public function request($method, $params = [], $data_type = 'JSON')
+    public function request(string $method, array $params = [], string $data_type = 'JSON')
     {
         $http = $this->getHttp();
         $params = $this->paramsHandle($params);
@@ -76,7 +88,7 @@ class Api extends AbstractAPI
      *
      * @return array
      */
-    protected function paramsHandle(array $params)
+    protected function paramsHandle(array $params): array
     {
         array_walk($params, function (&$item) {
             if (is_array($item)) {
