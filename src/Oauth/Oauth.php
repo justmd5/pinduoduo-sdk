@@ -23,12 +23,12 @@ class Oauth
     }
 
     /**
-     * @param     $token
-     * @param int $expires
+     * @param  string  $token
+     * @param  int  $expires
      *
      * @return PinDuoDuo
      */
-    public function createAuthorization($token, $expires = 86399)
+    public function createAuthorization(string $token, int $expires = 86399): PinDuoDuo
     {
         $accessToken = new AccessToken(
             $this->app->getConfig('client_id'),

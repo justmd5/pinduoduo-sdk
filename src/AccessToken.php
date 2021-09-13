@@ -29,7 +29,11 @@ class AccessToken extends AbstractAccessToken
      */
     protected $expiresJsonKey = 'expires_in';
 
-    public function __construct($clientId, $secret)
+    /**
+     * @param  string $clientId
+     * @param  string  $secret
+     */
+    public function __construct(string $clientId, string $secret)
     {
         $this->appId = $clientId;
         $this->secret = $secret;
@@ -60,7 +64,12 @@ class AccessToken extends AbstractAccessToken
         return json_decode(strval($response->getBody()), true);
     }
 
-    public function getToken($forceRefresh = false)
+    /**
+     * @param  boolean  $forceRefresh
+     *
+     * @return string
+     */
+    public function getToken($forceRefresh = false): string
     {
         return $this->token ?: parent::getToken($forceRefresh);
     }
@@ -84,9 +93,9 @@ class AccessToken extends AbstractAccessToken
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getClientId()
+    public function getClientId(): string
     {
         return $this->appId;
     }
@@ -94,7 +103,7 @@ class AccessToken extends AbstractAccessToken
     /**
      * @return string
      */
-    public function getSecret()
+    public function getSecret(): string
     {
         return $this->secret;
     }
@@ -104,7 +113,7 @@ class AccessToken extends AbstractAccessToken
      *
      * @return AccessToken
      */
-    public function setCode($code)
+    public function setCode($code): AccessToken
     {
         $this->code = $code;
 
