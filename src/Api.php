@@ -46,7 +46,7 @@ class Api extends AbstractAPI
     }
 
     /**
-     * @param  bool  $auth
+     * @param bool $auth
      *
      * @return $this
      */
@@ -58,9 +58,9 @@ class Api extends AbstractAPI
     }
 
     /**
-     * @param  string  $method
-     * @param  array  $params
-     * @param  string  $data_type
+     * @param string $method
+     * @param array  $params
+     * @param string $data_type
      *
      * @return mixed
      */

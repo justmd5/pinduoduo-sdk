@@ -23,8 +23,8 @@ class Oauth
     }
 
     /**
-     * @param  string  $token
-     * @param  int  $expires
+     * @param string $token
+     * @param int    $expires
      *
      * @return PinDuoDuo
      */
