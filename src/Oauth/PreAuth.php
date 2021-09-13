@@ -32,8 +32,8 @@ class PreAuth
     /**
      * 重定向至授权 URL.
      *
-     * @param  string  $state
-     * @param  string|null  $view
+     * @param string      $state
+     * @param string|null $view
      */
     public function authorizationRedirect(string $state = 'state', string $view = null)
     {
@@ -50,8 +50,8 @@ class PreAuth
     /**
      * 获取授权URL.
      *
-     * @param  string|null  $state
-     * @param  string|null  $view
+     * @param string|null $state
+     * @param string|null $view
      *
      * @return string
      */
@@ -69,8 +69,8 @@ class PreAuth
     /**
      * 获取 access token.
      *
-     * @param  string|null  $code
-     * @param null $state
+     * @param string|null $code
+     * @param null        $state
      *
      * @return mixed
      */
@@ -89,8 +89,8 @@ class PreAuth
     /**
      * 刷新令牌.
      *
-     * @param  string  $refreshToken
-     * @param  string|null  $state
+     * @param string      $refreshToken
+     * @param string|null $state
      *
      * @return mixed
      */
