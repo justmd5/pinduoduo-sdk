@@ -1,5 +1,7 @@
 <h1 align="center">拼多多API SDK【拼多多开放平台】</h1>
 
+<img src="https://socialify.git.ci/justmd5/pinduoduo-sdk/image?description=1&font=Rokkitt&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1" />
+
 <p align="center">
 <a href="https://styleci.io/repos/153218715"><img src="https://styleci.io/repos/153218715/shield?branch=master" alt="styleci"></a>
 <a href="https://packagist.org/packages/justmd5/pinduoduo-sdk"><img src="https://img.shields.io/packagist/php-v/justmd5/pinduoduo-sdk.svg" alt="PHP from Packagist"></a>
