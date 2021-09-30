@@ -11,7 +11,9 @@
 </p>
 
 <img src="https://socialify.git.ci/justmd5/pinduoduo-sdk/image?description=1&font=Rokkitt&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark" />
+
 ### 要求
+
 1. PHP >= 7.0
 2. **[Composer](https://getcomposer.org/)**
 3. ext-curl 拓展
