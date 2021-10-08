@@ -49,11 +49,13 @@ $pinduoduo = new PinDuoDuo($config);
 ### 调用示例
 
 >因目前我只有多多客角色账号，所以示例以多多客接口为例，其他两种角色理论相同，请自行尝试
-#### 调用无需授权接口示例
-> 多多进宝商品详情查询 pdd.ddk.goods.detail
-```php
-$result   = $pinduoduo->api->request('pdd.ddk.goods.detail', ['goods_id_list' => ['395581006']]);
 
+#### 调用无需授权接口示例
+
+> 多多进宝商品详情查询 pdd.ddk.goods.detail
+
+```php
+$result = $pinduoduo->api->auth(false)->request('pdd.ddk.goods.detail',['goods_sign'=>'Y9X2o23Pb-lfwWc1wvfZk0N5-QNj-R7b_JlrlXGK3D']);
 ```
 #### 调用需授权接口示例
 
@@ -62,24 +64,33 @@ $result   = $pinduoduo->api->request('pdd.ddk.goods.detail', ['goods_id_list' =>
 $url = $pinduoduo->pre_auth->authorizationUrl();
 ```
 * 重定向到授权页面
+
 ```php
 $pinduoduo->pre_auth->authorizationRedirect();
 ```
+
 * 在重定向页面，你可以获取此次授权账号的 token
+
 ```php
 $token = $pinduoduo->pre_auth->getAccessToken();
 //也可以通过上面得到的 refresh_token 去刷新令牌
 //$token = $pinduoduo->pre_auth->refreshToken($token['refresh_token']);
 ```
+
 * 创建授权应用
+
 ```php
 $pinduoduo = $pinduoduo->oauth->createAuthorization($token['token']);
 ```
+
 > 获取当前账号下有多少推广位 pdd.ddk.oauth.goods.pid.query
+
 ```php
 $result   = $pinduoduo->auth_api->request('pdd.ddk.oauth.goods.pid.query');
 ```
+
 ### 文档
+
 [拼多多开放平台](http://open.pinduoduo.com/)  · [官方文档](http://open.pinduoduo.com/#/apidocument)
 
 
