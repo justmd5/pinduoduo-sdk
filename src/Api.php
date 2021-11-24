@@ -32,7 +32,7 @@ class Api extends AbstractAPI
      *
      * @return string
      */
-    private function signature($params)
+    private function signature($params): string
     {
         ksort($params);
         $paramsStr = '';
