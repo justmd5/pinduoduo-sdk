@@ -89,6 +89,12 @@ $pinduoduo = $pinduoduo->oauth->createAuthorization($token['token']);
 $result   = $pinduoduo->auth_api->request('pdd.ddk.oauth.goods.pid.query');
 ```
 
+### 以上调用需授权接口示例步骤可改为以下一条语句（推荐）
+
+```php
+$result   = $pinduoduo->api->auth()->request('pdd.ddk.goods.pid.query')
+```
+
 ### 文档
 
 [拼多多开放平台](http://open.pinduoduo.com/)  · [官方文档](http://open.pinduoduo.com/#/apidocument)
