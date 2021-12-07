@@ -31,9 +31,9 @@ class AccessToken extends AbstractAccessToken
     protected $expiresJsonKey = 'expires_in';
 
     /**
-     * @param  string  $clientId
-     * @param  string  $secret
-     * @param  Foundation  $app
+     * @param string     $clientId
+     * @param string     $secret
+     * @param Foundation $app
      */
     public function __construct(string $clientId, string $secret, Foundation $app)
     {
