@@ -9,6 +9,7 @@
 namespace Justmd5\PinDuoDuo;
 
 use Hanson\Foundation\AbstractAccessToken;
+use Hanson\Foundation\Foundation;
 
 class AccessToken extends AbstractAccessToken
 {
@@ -30,11 +31,13 @@ class AccessToken extends AbstractAccessToken
     protected $expiresJsonKey = 'expires_in';
 
     /**
-     * @param string $clientId
-     * @param string $secret
+     * @param  string  $clientId
+     * @param  string  $secret
+     * @param  Foundation  $app
      */
-    public function __construct(string $clientId, string $secret)
+    public function __construct(string $clientId, string $secret, Foundation $app)
     {
+        parent::__construct($app);
         $this->appId = $clientId;
         $this->secret = $secret;
     }

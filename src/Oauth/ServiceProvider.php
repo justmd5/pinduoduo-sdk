@@ -26,7 +26,8 @@ class ServiceProvider implements ServiceProviderInterface
         $pimple['oauth.access_token'] = function (Foundation $pimple) {
             $accessToken = new AccessToken(
                 $pimple->getConfig('client_id'),
-                $pimple->getConfig('client_secret')
+                $pimple->getConfig('client_secret'),
+                $pimple
             );
             $accessToken->setHttp($pimple->http);
             $accessToken->setRequest($pimple['request']);
