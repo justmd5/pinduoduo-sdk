@@ -55,7 +55,7 @@ $pinduoduo = new PinDuoDuo($config);
 > 多多进宝商品详情查询 pdd.ddk.goods.detail
 
 ```php
-$result = $pinduoduo->api->auth(false)->request('pdd.ddk.goods.detail',['goods_sign'=>'Y9X2o23Pb-lfwWc1wvfZk0N5-QNj-R7b_JlrlXGK3D']);
+$result = $pinduoduo->api->request('pdd.ddk.goods.detail',['goods_sign'=>'Y9X2o23Pb-lfwWc1wvfZk0N5-QNj-R7b_JlrlXGK3D']);
 ```
 #### 调用需授权接口示例
 
