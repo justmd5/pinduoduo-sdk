@@ -15,11 +15,11 @@ use Justmd5\PinDuoDuo\Oauth\PreAuth;
 /**
  * Class PinDuoDuo.
  *
- * @property Api $api
- * @property Api $auth_api
+ * @property Api         $api
+ * @property Api         $auth_api
  * @property AccessToken $access_token
- * @property PreAuth $pre_auth
- * @property Oauth   $oauth
+ * @property PreAuth     $pre_auth
+ * @property Oauth       $oauth
  */
 class PinDuoDuo extends Foundation
 {
