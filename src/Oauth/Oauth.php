@@ -32,7 +32,8 @@ class Oauth
     {
         $accessToken = new AccessToken(
             $this->app->getConfig('client_id'),
-            $this->app->getConfig('client_secret')
+            $this->app->getConfig('client_secret'),
+            $this->app
         );
 
         $accessToken->setToken($token, $expires);
