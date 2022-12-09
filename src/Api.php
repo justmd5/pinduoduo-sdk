@@ -57,8 +57,8 @@ class Api extends AbstractAPI
     }
 
     /**
-     * @param string $type API接口名称
-     * @param array $params 请求参数 非公参以外参数
+     * @param string $type      API接口名称
+     * @param array  $params    请求参数 非公参以外参数
      * @param string $data_type 响应格式，即返回数据的格式，JSON或者XML（二选一），默认JSON，注意是大写
      *
      * @return mixed
