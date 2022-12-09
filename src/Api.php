@@ -57,13 +57,13 @@ class Api extends AbstractAPI
     }
 
     /**
-     * @param string $method
-     * @param array  $params
-     * @param string $data_type
+     * @param string $type API接口名称
+     * @param array $params 请求参数 非公参以外参数
+     * @param string $data_type 响应格式，即返回数据的格式，JSON或者XML（二选一），默认JSON，注意是大写
      *
      * @return mixed
      */
-    public function request(string $method, array $params = [], string $data_type = 'JSON')
+    public function request(string $type, array $params = [], string $data_type = 'JSON', $version = 'V1')
     {
         $http = $this->getHttp();
         $params = $this->paramsHandle($params);
@@ -72,8 +72,9 @@ class Api extends AbstractAPI
         }
         $params['client_id'] = $this->pinduoduo['oauth.access_token']->getClientId();
         $params['sign_method'] = 'md5';
-        $params['type'] = $method;
+        $params['type'] = $type;
         $params['data_type'] = $data_type;
+        $params['version'] = $version;
         $params['timestamp'] = strval(time());
         $params['sign'] = $this->signature($params);
         $method = 'post';
