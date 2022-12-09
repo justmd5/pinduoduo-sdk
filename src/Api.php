@@ -76,7 +76,16 @@ class Api extends AbstractAPI
         $params['data_type'] = $data_type;
         $params['timestamp'] = strval(time());
         $params['sign'] = $this->signature($params);
-        $response = call_user_func_array([$http, 'post'], [self::URL, $params]);
+        $method='post';
+        $data = [self::URL];
+        //文件上传兼容
+        if (!empty($params['file'])) {
+            $method = 'upload';
+            array_push($data, [], ['file' => $params['file']]);
+            unset($params['file']);
+        }
+        $data[] = $params;
+        $response = call_user_func_array([$http, $method], $data);
         $responseBody = strval($response->getBody());
 
         return strtolower($data_type) == 'json' ? json_decode($responseBody, true) : $responseBody;
