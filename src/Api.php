@@ -76,7 +76,7 @@ class Api extends AbstractAPI
         $params['data_type'] = $data_type;
         $params['timestamp'] = strval(time());
         $params['sign'] = $this->signature($params);
-        $method='post';
+        $method = 'post';
         $data = [self::URL];
         //文件上传兼容
         if (!empty($params['file'])) {
