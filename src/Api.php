@@ -82,7 +82,7 @@ class Api extends AbstractAPI
         $data = [static::URL];
         //文件上传兼容
         if (!empty($params['file'])) {
-            $data=[static::UPLOAD_URL];
+            $data = [static::UPLOAD_URL];
             $method = 'upload';
             array_push($data, [], ['file' => $params['file']]);
         }
