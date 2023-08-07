@@ -13,6 +13,7 @@ use Hanson\Foundation\AbstractAPI;
 class Api extends AbstractAPI
 {
     const URL = 'https://gw-api.pinduoduo.com/api/router';
+    const UPLOAD_URL = 'https://gw-upload.pinduoduo.com/api/upload';
 
     /**
      * @var pinduoduo
@@ -78,12 +79,12 @@ class Api extends AbstractAPI
         $params['timestamp'] = strval(time());
         $params['sign'] = $this->signature($params);
         $method = 'post';
-        $data = [self::URL];
+        $data = [static::URL];
         //文件上传兼容
         if (!empty($params['file'])) {
+            $data=[static::UPLOAD_URL];
             $method = 'upload';
             array_push($data, [], ['file' => $params['file']]);
-            unset($params['file']);
         }
         $data[] = $params;
         $response = call_user_func_array([$http, $method], $data);
