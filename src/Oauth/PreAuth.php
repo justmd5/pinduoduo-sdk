@@ -57,14 +57,17 @@ class PreAuth
      */
     public function authorizationUrl(string $state = null, string $view = null): string
     {
-        return sprintf("%s?%s", static::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))],
+        return sprintf(
+            '%s?%s',
+            static::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))],
             http_build_query([
                 'client_id'     => $this->accessToken()->getClientId(),
                 'response_type' => 'code',
                 'state'         => $state,
                 'redirect_uri'  => $this->accessToken()->getRedirectUri(),
                 'view'          => $view,
-            ]));
+            ])
+        );
     }
 
     /**
