@@ -13,11 +13,11 @@ use Justmd5\PinDuoDuo\PinDuoDuo;
 class PreAuth
 {
     const AUTHORIZE_API_ARR = [
-        'MERCHANT'  => 'https://fuwu.pinduoduo.com/service-market/auth?',   //拼多多店铺,WEB端网页授权
-        'H5'        => 'https://mai.pinduoduo.com/h5-login.html?',          //拼多多店铺,H5移动端网页授权
-        'JINBAO'    => 'https://jinbao.pinduoduo.com/open.html?',           //多多进宝推手,WEB端网页授权
-        'KTT'       => 'https://oauth.pinduoduo.com/authorize/ktt?',        //快团团团长,WEB端网页授权
-        'LOGISTICS' => 'https://wb.pinduoduo.com/logistics/auth?',          //拼多多电子面单用户,WEB端网页授权
+        'MERCHANT'  => 'https://fuwu.pinduoduo.com/service-market/auth',   //拼多多店铺,WEB端网页授权
+        'H5'        => 'https://mai.pinduoduo.com/h5-login.html',          //拼多多店铺,H5移动端网页授权
+        'JINBAO'    => 'https://jinbao.pinduoduo.com/open.html',           //多多进宝推手,WEB端网页授权
+        'KTT'       => 'https://oauth.pinduoduo.com/authorize/ktt',        //快团团团长,WEB端网页授权
+        'LOGISTICS' => 'https://wb.pinduoduo.com/logistics/auth',          //拼多多电子面单用户,WEB端网页授权
     ];
     /**
      * @var PinDuoDuo
@@ -57,13 +57,14 @@ class PreAuth
      */
     public function authorizationUrl(string $state = null, string $view = null): string
     {
-        return self::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))].http_build_query([
-            'client_id'     => $this->accessToken()->getClientId(),
-            'response_type' => 'code',
-            'state'         => $state,
-            'redirect_uri'  => $this->accessToken()->getRedirectUri(),
-            'view'          => $view,
-        ]);
+        return sprintf("%s?%s", static::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))],
+            http_build_query([
+                'client_id'     => $this->accessToken()->getClientId(),
+                'response_type' => 'code',
+                'state'         => $state,
+                'redirect_uri'  => $this->accessToken()->getRedirectUri(),
+                'view'          => $view,
+            ]));
     }
 
     /**

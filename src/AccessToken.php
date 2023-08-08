@@ -57,7 +57,7 @@ class AccessToken extends AbstractAccessToken
         if (empty($this->code)) {
             throw new \Exception('code不能为空');
         }
-        $response = $this->getHttp()->json(self::TOKEN_API, [
+        $response = $this->getHttp()->json(static::TOKEN_API, [
             'client_id'     => $this->appId,
             'client_secret' => $this->secret,
             'grant_type'    => 'authorization_code',
