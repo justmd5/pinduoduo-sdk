@@ -41,8 +41,9 @@ class Api extends AbstractAPI
                 $paramsStr .= sprintf('%s%s', $key, $item);
             }
         });
+        $secret = $this->pinduoduo['oauth.access_token']->getSecret();
 
-        return strtoupper(md5(sprintf('%s%s%s', $this->pinduoduo['oauth.access_token']->getSecret(), $paramsStr, $this->pinduoduo['oauth.access_token']->getSecret())));
+        return strtoupper(md5(sprintf('%s%s%s', $secret, $paramsStr, $secret)));
     }
 
     /**
