@@ -110,3 +110,8 @@ MIT
 
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjustmd5%2Fpinduoduo-sdk?ref=badge_large)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=justmd5/pinduoduo-sdk&type=Date)](https://star-history.com/#justmd5/pinduoduo-sdk&Date)
+
