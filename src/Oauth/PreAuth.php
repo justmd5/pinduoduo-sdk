@@ -57,15 +57,19 @@ class PreAuth
      */
     public function authorizationUrl(string $state = null, string $view = null): string
     {
+        $memberType = strtoupper($this->app->getConfig('member_type'));
+        if (!array_key_exists($memberType, static::AUTHORIZE_API_ARR)) {
+            throw new \InvalidArgumentException('Invalid member type');
+        }
         return sprintf(
             '%s?%s',
-            static::AUTHORIZE_API_ARR[strtoupper($this->app->getConfig('member_type'))],
+            static::AUTHORIZE_API_ARR[$memberType],
             http_build_query([
                 'client_id'     => $this->accessToken()->getClientId(),
                 'response_type' => 'code',
                 'state'         => $state,
                 'redirect_uri'  => $this->accessToken()->getRedirectUri(),
-                'view'          => $view,
+                'view'          => $memberType === 'H5' ? 'h5' : $view,
             ])
         );
     }
